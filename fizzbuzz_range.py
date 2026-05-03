@@ -9,6 +9,5 @@ def fizzbuzz(n):
         print(n)
 
 
-user_input = input("Enter an integer: ")
-number = int(user_input)
-fizzbuzz(number)
+for i in range(1, 21):
+    fizzbuzz(i)
