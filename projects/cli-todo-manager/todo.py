@@ -38,39 +38,43 @@ def complete_task(tasks, task_id):
             return True
     return False
 
-tasks = load_tasks()
+def main():
+    tasks = load_tasks()
 
-while True:
-    print("Todo menu")
-    print("1. Add task")
-    print("2. List tasks")
-    print("3. Complete task")
-    print("4. Exit")
+    while True:
+        print("Todo menu")
+        print("1. Add task")
+        print("2. List tasks")
+        print("3. Complete task")
+        print("4. Exit")
 
-    choice = input("Enter your choice: ")
+        choice = input("Enter your choice: ")
 
-    if choice == "1":
-        title = input("Enter a new task: ")
-        add_task(tasks, title)
-        print("Task added.")
+        if choice == "1":
+            title = input("Enter a new task: ")
+            add_task(tasks, title)
+            print("Task added.")
 
-    elif choice == "2":
-        print("Current tasks: ")
-        list_tasks(tasks)
+        elif choice == "2":
+            print("Current tasks: ")
+            list_tasks(tasks)
 
-    elif choice == "3":
-        print("Current tasks: ")
-        list_tasks(tasks)
-        task_id = int(input("Enter task ID to mark complete: "))
-        updated = complete_task(tasks, task_id)
-        if updated:
-            print("Task updated.")
+        elif choice == "3":
+            print("Current tasks: ")
+            list_tasks(tasks)
+            task_id = int(input("Enter task ID to mark complete: "))
+            updated = complete_task(tasks, task_id)
+            if updated:
+                print("Task updated.")
+            else:
+                print("Task ID not found.")
+
+        elif choice == "4":
+            print("Goodbye!")
+            break;
+
         else:
-            print("Task ID not found.")
+            print("Invalid choice. Please enter 1, 2, 3, or 4.")
 
-    elif choice == "4":
-        print("Goodbye!")
-        break;
-
-    else:
-        print("Invalid choice. Please enter 1, 2, 3, or 4.")
+if __name__ == "__main__":
+    main()

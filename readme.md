@@ -1,17 +1,26 @@
 # Python Apprenticeship
 
-This repository contains small Python scripts I'm writing as I rebuild my
-software engineering skills in 2026.
+This repository contains my Python apprenticeship work as I rebuild my software engineering fundamentals through hands-on practice.
 
-## Scripts
+It includes small practice scripts, testing exercises, and mini-projects that focus on writing clean Python, working with files, using Git/GitHub, and building stronger engineering habits.
 
-- `hello.py`: prints a simple greeting to verify that Python is installed and
-  working.
-- `fizzbuzz.py`: asks for a number and prints "Fizz", "Buzz", "FizzBuzz", or
-  the number itself based on divisibility by 3 and/or 5.
-- `fizzbuzz_range.py`: runs FizzBuzz for the numbers 1 through 20 using a loop
-  and a reusable function.
-- `max_in_list.py`: iterates over a list of integers and tracks the maximum
-  value.
+## Current Project
 
-More scripts and exercises will be added over time.
+- [CLI Todo Manager](./projects/cli-todo-manager/README.md)  
+  A command-line todo application built with Python and JSON persistence.  
+  This project includes task creation, task listing, task completion, and pytest-based tests.
+
+## Skills Practiced
+
+- Python fundamentals
+- Functions
+- Lists and dictionaries
+- JSON file handling
+- Command-line programs
+- Git and GitHub
+- Pytest
+
+## Repository Structure
+
+- `projects/` – mini-projects
+- root-level `.py` files – smaller practice exercises and experiments

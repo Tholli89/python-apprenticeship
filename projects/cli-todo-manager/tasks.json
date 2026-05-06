@@ -1,27 +1,22 @@
 [
     {
         "id": 1,
-        "title": "Study Python",
+        "title": "Study pytest",
         "completed": true
     },
     {
         "id": 2,
-        "title": "Review Git",
-        "completed": true
+        "title": "Study data structures",
+        "completed": false
     },
     {
         "id": 3,
-        "title": "Study Python functions",
-        "completed": true
+        "title": "Study algorithms",
+        "completed": false
     },
     {
         "id": 4,
-        "title": "Learn Data Structures",
-        "completed": true
-    },
-    {
-        "id": 5,
-        "title": "Learn algorithms",
-        "completed": true
+        "title": "Study OOP",
+        "completed": false
     }
 ]
