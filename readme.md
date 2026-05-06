@@ -6,7 +6,7 @@ It includes small practice scripts, testing exercises, and mini-projects that fo
 
 ## Current Project
 
-- [CLI Todo Manager](./projects/cli-todo-manager/README.md)  
+- [CLI Todo Manager](./projects/cli-todo-manager/readme.md)  
   A command-line todo application built with Python and JSON persistence.  
   This project includes task creation, task listing, task completion, and pytest-based tests.
 
