@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "title": "Study Python",
+        "completed": true
+    },
+    {
+        "id": 2,
+        "title": "Review Git",
+        "completed": true
+    },
+    {
+        "id": 3,
+        "title": "Study Python functions",
+        "completed": true
+    },
+    {
+        "id": 4,
+        "title": "Learn Data Structures",
+        "completed": true
+    },
+    {
+        "id": 5,
+        "title": "Learn algorithms",
+        "completed": true
+    }
+]
