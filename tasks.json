@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "title": "Study Json",
+        "completed": true
+    },
+    {
+        "id": 2,
+        "title": "Study OOP",
+        "completed": false
+    },
+    {
+        "id": 3,
+        "title": "Study Pytest",
+        "completed": false
+    }
+]
