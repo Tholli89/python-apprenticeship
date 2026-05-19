@@ -1,17 +1,17 @@
 # CLI Todo Manager
 
-A simple command-line todo application built in Python.
-
-This project lets a user add tasks, list tasks, and mark tasks as completed.  
-Tasks are saved in a JSON file so they persist between program runs.
+A command-line todo application built in Python that supports basic CRUD operations, JSON persistence, input validation, and pytest-based testing.
 
 ## Features
 
 - Add a new task
 - List all tasks
 - Mark a task as completed
+- Delete a task
 - Save tasks to `tasks.json`
 - Load saved tasks when the program starts
+- Validate empty task titles
+- Handle invalid task ID input safely
 
 ## Technologies Used
 
@@ -19,42 +19,62 @@ Tasks are saved in a JSON file so they persist between program runs.
 - JSON
 - Git
 - GitHub
+- pytest
 
 ## How to Run
 
-1. Open the project folder in VS Code
-2. Open the terminal
-3. Run:
+1. Open the project folder in VS Code or your terminal
+2. Navigate to the project directory:
+   ```bash
+   cd projects/cli-todo-manager
+   ```
+3. Run the app:
+   ```bash
+   python todo.py
+   ```
+
+## How to Run Tests
+
+From the project folder, run:
 
 ```bash
-python todo.py
+pytest test_todo.py
 ```
 
-## Example Usage
+Or from the repository root, run:
+
+```bash
+pytest projects/cli-todo-manager/test_todo.py
+```
+
+## Example Menu
 
 ```text
 Todo Menu
 1. Add task
 2. List tasks
 3. Complete task
-4. Exit
+4. Delete task
+5. Exit
 ```
 
-## What I Learned
+## What I Practiced
 
 While building this project, I practiced:
 
 - Functions
 - Lists and dictionaries
 - JSON file handling
-- Loops and conditionals
-- User input
-- Basic CLI program structure
+- CRUD operations
+- Input validation
+- Error handling with `try`/`except`
+- Writing automated tests with pytest
+- Refactoring code into smaller handler functions
+- Git and GitHub workflow
 
 ## Future Improvements
 
-- Delete a task
-- Better error handling for invalid IDs
-- Add priorities
+- Add task priorities
 - Add due dates
-- Add automated tests for todo functions
+- Improve task editing
+- Add more test coverage for handler-level behavior

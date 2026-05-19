@@ -46,6 +46,51 @@ def delete_task(tasks, task_id):
             return True
     return False
 
+
+def handle_complete_task(tasks):
+    print("Current tasks:")
+    list_tasks(tasks)
+
+    try:
+        task_id = int(input("Enter task ID to mark complete: "))
+        updated = complete_task(tasks, task_id)
+        if updated:
+            print("Task updated.")
+        else:
+            print("Task ID not found.")
+    except ValueError:
+        print("Please enter a valid number.")
+
+def handle_delete_task(tasks):
+    print("Current tasks:")
+    list_tasks(tasks)
+
+    try:
+        task_id = int(input("Enter task ID to delete: "))
+        deleted = delete_task(tasks, task_id)
+
+        if deleted:
+            print("Task deleted.")
+        else:
+            print("Task ID not found.")
+    except ValueError:
+        print("Please enter a valid number.")
+
+def handle_add_task(tasks):
+    title = input("Enter a new task: ").strip()
+
+    if not title:
+        print("Task title cannot be empty.")
+    else:
+        add_task(tasks, title)
+        print("Task added.")
+
+def handle_list_tasks(tasks):
+    print("Current tasks:")
+    list_tasks(tasks)
+
+
+
 def main():
     tasks = load_tasks()
 
@@ -60,46 +105,16 @@ def main():
         choice = input("Enter your choice: ")
 
         if choice == "1":
-            title = input("Enter a new task: ").strip()
-
-            if not title:
-                print("Task title cannot be empty.")
-            else:
-                add_task(tasks, title)
-                print("Task added.")
+            handle_add_task(tasks)
 
         elif choice == "2":
-            print("\nCurrent tasks: ")
-            list_tasks(tasks)
+            handle_list_tasks(tasks)
 
         elif choice == "3":
-            print("\nCurrent tasks: ")
-            list_tasks(tasks)
-
-            try:
-                task_id = int(input("Enter task ID to mark complete: "))
-                updated = complete_task(tasks, task_id)
-                if updated:
-                    print("Task updated.")
-                else:
-                    print("Task ID not found.")
-            except ValueError:
-                print("Please enter a valid number.")
+            handle_complete_task(tasks)
 
         elif choice == "4":
-            print("\nCurrent tasks:")
-            list_tasks(tasks)
-
-            try:
-                task_id = int(input("Enter task ID to delete: "))
-                deleted = delete_task(tasks, task_id)
-
-                if deleted:
-                    print("Task deleted.")
-                else:
-                    print("task ID not found.")
-            except ValueError:
-                print("Please enter a valid number.")
+            handle_delete_task(tasks)
 
         elif choice == "5":
             print("Goodbye!")
