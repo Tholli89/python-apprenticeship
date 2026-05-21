@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "title": "Finish README",
+        "completed": true,
+        "priority": "high",
+        "category": "portfolio"
+    },
+    {
+        "id": 2,
+        "title": "Practice Python",
+        "completed": false,
+        "priority": "medium",
+        "category": "study"
+    },
+    {
+        "id": 3,
+        "title": "Write tests",
+        "completed": true,
+        "priority": "high",
+        "category": "portfolio"
+    }
+]
