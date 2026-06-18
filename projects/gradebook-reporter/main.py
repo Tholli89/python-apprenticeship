@@ -1,5 +1,19 @@
+import csv
+
 def load_grades_from_csv(path):
-    pass
+    rows = []
+
+    with open(path, "r", encoding="utf-8") as file:
+        reader = csv.DictReader(file)
+
+        for row in reader:
+            rows.append({
+                "name": row["name"],
+                "subject": row["subject"],
+                "score": int(row["score"]),
+            })
+
+    return rows
 
 def summarize_grades(rows):
     total_students = 0
@@ -45,9 +59,10 @@ def print_report(summary):
     print(f"total_students={summary["total_students"]} \naverage_score={summary["average_score"]} \nhighest_score={summary["highest_score"]} \nlowest_score={summary["lowest_score"]} \npassing={summary["total_passing"]} \nfailing={summary["total_failing"]}")
 
 def main():
-    load_grades_from_csv("grades.csv")
-    summarize_grades(rows)
-    print_report(summary)
+    rows = load_grades_from_csv("grades.csv")
+    summary = summarize_grades(rows)
+    print(summary)
+
 
 if __name__ == "__main__":
     main()

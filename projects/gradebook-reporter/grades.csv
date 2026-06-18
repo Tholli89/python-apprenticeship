@@ -1,6 +1,5 @@
-[
-    {"name": "Alice", "subject": "Math", "score": 88},
-    {"name": "Bob", "subject": "Math", "score": 75},
-    {"name": "Cara", "subject": "Math", "score": 92},
-    {"name": "Dan", "subject": "Math", "score": 60},
-]
+name,subject,score
+Alice,Math,88
+Bob,Math,75
+Cara,Math,92
+Dan,Math,59
